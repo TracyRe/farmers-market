@@ -277,11 +277,33 @@ function SeasonalProduce(){
 
 return(
   <div>
-    <h2>What's Fresh Year &apos;Round</h2>
-    {availableProduce.map((available, index) =>
-      <Month month={available.month}
-        selection={available.selection} />
-    )}
+    <style jsx>{`
+
+      .monthlyCalendar {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, auto);
+      }
+      h1{
+        padding-top: 2em;
+        text-align: center;
+        padding-bottom: 1em;
+        font-weight: normal;
+        font-size: 3em;
+
+      }
+    `}</style>
+
+
+
+  <h1>What's Fresh Year &apos;Round</h1>
+      <div className="monthlyCalendar">
+        {availableProduce.map((available, index) =>
+          <Month month={available.month}
+            selection={available.selection} />
+        )}
+    </div>
+
   </div>
   );
 }

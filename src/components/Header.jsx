@@ -1,9 +1,13 @@
 import React from 'react';
 
 function Header(){
+  const headerStyle = {
+    textAlign: 'center',
+    padding: '1em'
+  }
 
   return(
-    <div>
+    <div style={headerStyle}>
       <h1>Avery's Organics</h1>
     </div>
   );

@@ -45,13 +45,19 @@ const marketSchedule = [
 
 function MarketSchedule(){
 
+
   return(
     <div>
       <style jsx>{`
 
-        div {
+        .schedule {
             display: grid;
-            grid-template-columns: repeat 7 1fr;
+            grid-template-columns: repeat(6, 1fr);
+            text-align: center;
+        }
+        h2 {
+          text-align: center;
+          padding: 1em;
         }
 
 
@@ -59,6 +65,7 @@ function MarketSchedule(){
       <hr/>
 
     <h2>Where and When to Find Us</h2>
+      <div className="schedule">
       {marketSchedule.map((schedule, index) =>
         <Day day={schedule.day}
           location={schedule.location}
@@ -66,6 +73,7 @@ function MarketSchedule(){
           booth={schedule.booth}
           key={index}/>
       )}
+      </div>
 
     </div>
   );

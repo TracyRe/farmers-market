@@ -16,6 +16,7 @@ function App(){
         }
 
         body {
+          padding: 2em;
           font-family: Helvetica, Arial, sans-serif;
         }
 
