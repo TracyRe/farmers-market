@@ -2,6 +2,8 @@ import React from 'react';
 import Day from './Day';
 
 
+
+
 const marketSchedule = [
  {
     day: "Sunday",
@@ -45,7 +47,18 @@ function MarketSchedule(){
 
   return(
     <div>
+      <style jsx>{`
+
+        div {
+            display: grid;
+            grid-template-columns: repeat 7 1fr;
+        }
+
+
+      `}</style>
       <hr/>
+
+    <h2>Where and When to Find Us</h2>
       {marketSchedule.map((schedule, index) =>
         <Day day={schedule.day}
           location={schedule.location}

@@ -3,19 +3,14 @@ import PropTypes from 'prop-types';
 
 function Produce(props){
 
+
   return(
-    <div>
-      <h3>{props.month}</h3>
-      <ul>
-        <li>{props.selection} </li>
-      </ul>
-    </div>
+      <li>{props.selection}</li>
   );
 }
 
 Produce.propTypes = {
-  month: PropTypes.string,
-  selection: PropTypes.array
+  selection: PropTypes.arrayOf(PropTypes.string)
 };
 
 export default Produce;

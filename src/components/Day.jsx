@@ -7,10 +7,9 @@ function Day(props){
   return(
     <div>
       <h3>{props.day}</h3>
-      <h3>{props.location}</h3>
-      <h3>{props.hours}</h3>
-      <h3>Booth: {props.booth}</h3>
-      <hr/>
+      <h4>{props.location}</h4>
+      <h4>{props.hours}</h4>
+      <h4>Booth: {props.booth}</h4>
     </div>
   );
 }
