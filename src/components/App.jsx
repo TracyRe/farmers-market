@@ -18,7 +18,15 @@ function App(){
         body {
           padding: 2em;
           font-family: Helvetica, Arial, sans-serif;
+          width: 100vw;
         }
+
+        h1, h2{
+          text-align: center;
+          font-weight: normal;
+          font-size: 3em;
+        }
+
 
       `}</style>
       <Header/>

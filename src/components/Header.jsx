@@ -3,7 +3,7 @@ import React from 'react';
 function Header(){
   const headerStyle = {
     textAlign: 'center',
-    padding: '1em'
+    paddingBottom: '1em'
   }
 
   return(

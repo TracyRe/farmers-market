@@ -275,8 +275,14 @@ import Produce from './Produce';
 
 function SeasonalProduce(){
 
+
+  const h2Style = {
+    paddingTop: '1.5em',
+}
+
 return(
   <div>
+
     <style jsx>{`
 
       .monthlyCalendar {
@@ -284,19 +290,12 @@ return(
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(3, auto);
       }
-      h1{
-        padding-top: 2em;
-        text-align: center;
-        padding-bottom: 1em;
-        font-weight: normal;
-        font-size: 3em;
 
-      }
     `}</style>
 
 
 
-  <h1>What's Fresh Year &apos;Round</h1>
+  <h2 style={h2Style}>What's Fresh Year &apos;Round</h2>
       <div className="monthlyCalendar">
         {availableProduce.map((available, index) =>
           <Month month={available.month}

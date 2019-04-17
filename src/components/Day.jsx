@@ -3,18 +3,21 @@ import PropTypes from 'prop-types';
 
 function Day(props){
   const dayStyle = {
-    border: '1px solid lightgrey'
+    border: '1px solid lightgrey',
+    textAlign: 'center',
+    paddingBottom: '5px'
   }
-  const bgColor ={
-    background: 'pink'
+  const dayHead ={
+    background: '#CBE4D2',
+    marginBottom: '10px'
   }
 
   return(
     <div style={dayStyle}>
-      <h3 style={bgColor}>{props.day}</h3>
-      <h4>{props.location}</h4>
-      <h4>{props.hours}</h4>
-      <h4>Booth: {props.booth}</h4>
+      <h3 style={dayHead}>{props.day}</h3>
+      <p>{props.location}</p>
+      <p>{props.hours}</p>
+      <p>Booth {props.booth}</p>
     </div>
   );
 }

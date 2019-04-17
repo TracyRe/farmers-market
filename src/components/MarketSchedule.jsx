@@ -45,6 +45,10 @@ const marketSchedule = [
 
 function MarketSchedule(){
 
+  const h2Style = {
+    paddingTop: '1em',
+    paddingBottom: '.5em'
+  }
 
   return(
     <div>
@@ -52,19 +56,16 @@ function MarketSchedule(){
 
         .schedule {
             display: grid;
-            grid-template-columns: repeat(6, 1fr);
+            grid-template-columns: repeat(auto-fill, minmax(16.5%, 160px));
+            grid-auto
             text-align: center;
-        }
-        h2 {
-          text-align: center;
-          padding: 1em;
         }
 
 
       `}</style>
       <hr/>
 
-    <h2>Where and When to Find Us</h2>
+    <h2 style={h2Style}>Where and When to Find Us</h2>
       <div className="schedule">
       {marketSchedule.map((schedule, index) =>
         <Day day={schedule.day}

@@ -11,13 +11,24 @@ function Month(props){
     paddingRight: '2em',
     paddingTop: '1em',
     height: '33vh',
-    border: '1px solid lightgrey'
 
+  }
+
+  const h3Style= {
+    fontSize: '1.5em',
+    padding: '.25em 0',
+    background: '#CBE4D2',
+    textAlign: 'center'
+  }
+
+  const monthBox= {
+    marginTop: '1em',
+    border: '1px solid lightgrey'
   }
 console.log(props);
   return(
-    <div>
-      <h2>{props.month}</h2>
+    <div style={monthBox}>
+      <h3 style={h3Style}>{props.month}</h3>
         <ul style={ulStyle}>
         {props.selection.map((produce, index) =>
             <Produce selection={produce}
